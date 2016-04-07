@@ -3,13 +3,12 @@ define([
   , './app-controller'
   , './app-directive'
   , './glyphs/glyphs'
-  , './cpsPanel/cpsPanel'
+  , 'Atem-CPS-Developer-Tool/cpsPanel/cpsPanel'
 ], function(
     angular
   , Controller
   , directive
   , glyphs
-  , textEditor
   , cpsPanel
 ) {
     "use strict";

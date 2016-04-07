@@ -14,7 +14,7 @@
 
 <ol>
     <li
-        ng-repeat="glyph in selectGlyphs(selector) track by glyph.nodeID">
+        ng-repeat="glyph in ctrl.selectGlyphs(selector) track by glyph.nodeID">
         <mtk-glyph
             style="height:{{ glyphsize || initialGlypsize}}px"
             mtk-glyph-element="glyph"

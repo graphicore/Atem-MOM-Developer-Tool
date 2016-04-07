@@ -28,6 +28,7 @@
     "Atem-MOM-Toolkit": "git@github.com:graphicore/Atem-MOM-Toolkit.git",
     "Atem-MOM": "git@github.com:graphicore/Atem-MOM.git",
     "Atem-CPS-Developer-Tool": "git@github.com:graphicore/Atem-CPS-Developer-Tool.git",
-    "angular": "~1.5.3"
+    "angular": "~1.5.3",
+    "requirejs-domReady": "~2.0.1"
   }
 }
