@@ -1,8 +1,9 @@
 define([], function() {
     "use strict";
 
-    function redPillGlyphDirective(glyphUIService) {
+    function glyphDirective(glyphUIService) {
         function link(scope, element, attrs, controller) {
+            //jshint unused: vars
             var glyph = scope.mtkGlyphElement
               , glyphInterface
               , domElement = element[0]
@@ -37,7 +38,7 @@ define([], function() {
             glyphInterface.on('viewBox-change', changeHandler);
             glyphInterface.on('select-mom', selectMomHandler);
 
-            scope.$on('show-glyph-controls', function(event, show){
+            scope.$on('show-glyph-controls', function (event, show) {
                 if(show)
                     glyphInterface.showControls();
                 else
@@ -57,6 +58,6 @@ define([], function() {
         };
     }
 
-    redPillGlyphDirective.$inject = ['glyphUIService'];
-    return redPillGlyphDirective;
+    glyphDirective.$inject = ['glyphUIService'];
+    return glyphDirective;
 });

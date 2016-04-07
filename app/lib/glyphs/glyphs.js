@@ -1,18 +1,18 @@
 define([
     'angular'
-  , './redPillGlyphs-controller'
-  , './redPillGlyphs-directive'
-  , './redPillGlyph-directive'
+  , './glyphs-controller'
+  , './glyphs-directive'
+  , './glyph-directive'
 ], function(
     angular
   , Controller
   , directive
-  , redPillGlyphDirective
+  , glyphDirective
 ) {
     "use strict";
-    return angular.module('mtk.redPillGlyphs', [])
-           .controller('RedPillGlyphsController', Controller)
-           .directive('mtkRedPillGlyphs', directive)
-           .directive('mtkRedPillGlyph', redPillGlyphDirective)
+    return angular.module('mtk.Glyphs', [])
+           .controller('GlyphsController', Controller)
+           .directive('mtkGlyphs', directive)
+           .directive('mtkGlyph', glyphDirective)
            ;
 });

@@ -15,11 +15,11 @@
 <ol>
     <li
         ng-repeat="glyph in selectGlyphs(selector) track by glyph.nodeID">
-        <mtk-red-pill-glyph
+        <mtk-glyph
             style="height:{{ glyphsize || initialGlypsize}}px"
             mtk-glyph-element="glyph"
             mtk-glyph-controls-visible="glyphControlsVisible"
             title="{{ glyph.particulars }}"
-            ></mtk-red-pill-glyph>
+            ></mtk-glyph>
     </li>
 </ol>

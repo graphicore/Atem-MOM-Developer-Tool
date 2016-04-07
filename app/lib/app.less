@@ -1,7 +1,5 @@
 @import (reference) "/lib/bower_components/bootstrap/less/mixins";
 
-@import "./textEditor/textEditor";
-
 @app-color: #CCC;
 @app-gap: .5em;
 @app-border: 1px solid black;
@@ -35,50 +33,50 @@ body.dependencies-ready .compatibility-info{
 }
 
 
-red-pill {
+mtk-mom-developer {
     display: none;
 }
 body.dependencies-ready {
     height: 100%;
 }
 
-red-pill label {
+mtk-mom-developer label {
     display: block;
 }
 
-red-pill label select {
+mtk-mom-developer label select {
     vertical-align: top;
 }
 
-red-pill {
+mtk-mom-developer {
     color: black;
     background: white;
 }
 
 
-mtk-red-pill-glyphs {
+mtk-glyphs {
     display:block;
     width: 100%;
 }
-.hasEditor mtk-red-pill-glyphs {
+.hasEditor mtk-glyphs {
     width: calc(~"100% - 450px");
 }
 
 
-mtk-red-pill-glyphs label{
+mtk-glyphs label{
     display: inline;
     vertical-align: bottom;
 }
 
-mtk-red-pill-glyphs label:first-child{
+mtk-glyphs label:first-child{
     margin-left: @app-gap;
 }
 
-mtk-red-pill-glyphs > label > * {
+mtk-glyphs > label > * {
     vertical-align: middle;
 }
 
-mtk-red-pill-glyph {
+mtk-glyph {
     display: block;
     overflow: visible;
     height: 100%;
@@ -158,7 +156,7 @@ mtk-red-pill-glyph {
     }
 }
 
-mtk-red-pill-glyph:hover span.particulars {
+mtk-glyph:hover span.particulars {
     width: auto;
     z-index: 100;
     /* this must hide again when the mouse is over it
@@ -169,19 +167,19 @@ mtk-red-pill-glyph:hover span.particulars {
     }
 }
 
-mtk-red-pill-glyphs ol{
+mtk-glyphs ol{
     white-space: normal;
     padding:0;
 }
 
-mtk-red-pill-glyphs li {
+mtk-glyphs li {
     display: inline-block;
     vertical-align: top;
 }
 
 
 
-red-pill {
+mtk-mom-developer {
 
     height: 100%;
     overflow: hidden;
@@ -193,12 +191,8 @@ red-pill {
         flex-shrink: 1;
         overflow: auto;
     }
-    mtk-text-editor{
-        width: 450px;
-    }
 
-    mtk-red-pill-glyphs,
-    mtk-text-editor {
+    mtk-glyphs  {
         display: inline-block;
         vertical-align: top;
     }

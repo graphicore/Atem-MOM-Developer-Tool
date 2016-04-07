@@ -1,13 +1,13 @@
 define([
-    'require/text!./redPillGlyphs.tpl'
+    'require/text!./glyphs.tpl'
     ], function(
     template
 ) {
     "use strict";
-    function redPillGlyphsDirective() {
+    function glyphsDirective() {
         return {
             restrict: 'E' // only matches element names
-          , controller: 'RedPillGlyphsController'
+          , controller: 'GlyphsController'
           , replace: false
           , template: template
           , scope: {}
@@ -15,6 +15,6 @@ define([
           , bindToController: true
         };
     }
-    redPillGlyphsDirective.$inject = [];
-    return redPillGlyphsDirective;
+    glyphsDirective.$inject = [];
+    return glyphsDirective;
 });

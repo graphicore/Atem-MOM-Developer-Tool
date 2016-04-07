@@ -2,20 +2,19 @@ define([
     'angular'
   , './app-controller'
   , './app-directive'
-  , './redPillGlyphs/redPillGlyphs'
-  , './textEditor/textEditor'
+  , './glyphs/glyphs'
   , './cpsPanel/cpsPanel'
 ], function(
     angular
   , Controller
   , directive
-  , redPillGlyphs
+  , glyphs
   , textEditor
   , cpsPanel
 ) {
     "use strict";
-    return angular.module('mtk.redPill', [redPillGlyphs.name, textEditor.name, cpsPanel.name])
+    return angular.module('mtk.MOMDeveloper', [glyphs.name, cpsPanel.name])
       .controller('AppController', Controller)
-      .directive('redPill', directive)
+      .directive('mtkMomDeveloper', directive)
       ;
 });
