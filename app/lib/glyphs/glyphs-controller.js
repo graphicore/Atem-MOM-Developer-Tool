@@ -8,9 +8,9 @@ define([
 
     var CPSError = errors.CPS;
 
-    function GlyphsController($scope, momController) {
+    function GlyphsController($scope, cpsController) {
         this.$scope = $scope;
-        this._momController = momController;
+        this._cpsController = cpsController;
 
         this._lastSelection = [];
 
@@ -19,7 +19,7 @@ define([
         this.$scope.glyphControlsVisible = true;
         this.$scope.glypsize = this.$scope.initialGlypsize = 512;
     }
-    GlyphsController.$inject = ['$scope', 'momController'];
+    GlyphsController.$inject = ['$scope', 'cpsController'];
     var _p = GlyphsController.prototype;
 
     _p.toggleGlyphControls = function() {
@@ -29,7 +29,7 @@ define([
 
     _p._selectGlyphs = function(selector) {
         try {
-            return this._momController.queryAll(selector)
+            return this._cpsController.queryAll(selector)
                 .filter(function(item){ return item.type === 'glyph'; });
         }
         catch(error) {

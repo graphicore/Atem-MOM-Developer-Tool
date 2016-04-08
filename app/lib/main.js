@@ -10,8 +10,10 @@ require([
   , 'Atem-MOM-Toolkit/dataTransformationCaches/DrawPointsProvider'
   , 'Atem-MOM-Toolkit/dataTransformationCaches/BBoxProvider'
   , 'Atem-MOM-Toolkit/services/glyph/GlyphUIService'
-  , 'Atem-MOM-Toolkit/services/dragAndDrop/DragDataService'
-  , 'Atem-MOM-Toolkit/services/dragAndDrop/DragIndicatorService'
+  , 'Atem-CPS-Toolkit/services/dragAndDrop/DragDataService'
+  , 'Atem-CPS-Toolkit/services/dragAndDrop/DragIndicatorService'
+  , 'Atem-MOM/cpsTools'
+  , 'Atem-MOM/errors'
 ],
 function (
     domReady
@@ -27,6 +29,8 @@ function (
   , GlyphUIService
   , DragDataService
   , DragIndicatorService
+  , cpsTools
+  , errors
 ) {
     "use strict";
     /*global document:true*/
@@ -50,13 +54,13 @@ function (
                     io: ioREST
                   , mountPoint: 'lib/MOM'
                   , pathOffset: 'lib/bower_components/Atem-MOM/lib/cpsLib'
-
                 }
             ]
           , project = new Project(io, projectDir, undefined, cpsLibIoMounts)
           , promise
           ;
 
+        angularApp.constant('cpsTools', cpsTools);
         // render glyphs
         angularApp.constant('glyphUIService', glyphUIService);
         // for cps-panel
@@ -65,21 +69,23 @@ function (
 
         // TODO: make a way to switch projects from within the app
         angularApp.constant('project', project);
-        angularApp.constant('momController', project.controller);
+        angularApp.constant('cpsController', project.controller);
         angularApp.constant('ruleController', project.ruleController);
 
         io.mkDir(false, 'project');
         promise = ioREST.copyRecursive(true, 'project', io, 'project')
                  .then(project.load.bind(project, true))
-                 // currently now async openSession (no problem since we
-                 // use InMemoryIO )
+                 // currently no async openSession (no bi issue since we
+                 // use mostly InMemoryIO)
                  .then(project.openSession.bind(project, false))
+                 .then(null, errors.unhandledPromise)
                  ;
-
         // this should be the last thing here, because domReady will execute
         // immediately if the DOM is already ready.
         domReady(function() {
-            promise.then(angular.bootstrap.bind(angular, document, [angularApp.name]));
+            promise.then(angular.bootstrap.bind(angular, document, [angularApp.name]))
+                   .then(null, errors.unhandledPromise)
+                   ;
         });
     }
     main();
