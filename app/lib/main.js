@@ -1,7 +1,7 @@
 require([
     'require/domReady'
   , 'angular'
-  , './app'
+  , './app/app'
   , 'Atem-MOM/project/Project'
   , 'Atem-IO/io/staticBrowserREST'
   , 'Atem-IO/io/InMemory'

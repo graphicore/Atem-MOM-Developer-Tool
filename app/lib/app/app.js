@@ -2,7 +2,7 @@ define([
     'angular'
   , './app-controller'
   , './app-directive'
-  , './glyphs/glyphs'
+  , 'Atem-MOM-Developer-Tool/glyphs/glyphs'
   , 'Atem-CPS-Developer-Tool/cpsPanel/cpsPanel'
 ], function(
     angular
