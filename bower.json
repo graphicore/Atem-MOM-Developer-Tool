@@ -28,10 +28,10 @@
     "Atem-MOM-Toolkit": "git@github.com:graphicore/Atem-MOM-Toolkit.git",
     "Atem-MOM": "git@github.com:graphicore/Atem-MOM.git",
     "Atem-CPS-Developer-Tool": "git@github.com:graphicore/Atem-CPS-Developer-Tool.git",
-    "angular": "~1.5.3",
-    "requirejs-domReady": "~2.0.1",
+    "angular": ">=1.5.3",
+    "requirejs-domReady": ">=2.0.1",
     "Atem-RequireJS-Config": "git@github.com:graphicore/Atem-RequireJS-Config.git",
-    "requirejs": "~2.2.0",
-    "less.js": "~2.6.1"
+    "requirejs": ">=2.2.0",
+    "less.js": ">=2.6.1"
   }
 }
