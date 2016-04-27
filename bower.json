@@ -32,6 +32,7 @@
     "requirejs-domReady": ">=2.0.1",
     "Atem-RequireJS-Config": "git@github.com:graphicore/Atem-RequireJS-Config.git",
     "requirejs": ">=2.2.0",
-    "less.js": ">=2.6.1"
+    "less.js": ">=2.6.1",
+    "metapolator-cpsLib": "metapolator/metapolator-cpsLib"
   }
 }

@@ -55,6 +55,11 @@ function (
                   , mountPoint: 'lib/MOM'
                   , pathOffset: 'lib/bower_components/Atem-MOM/lib/cpsLib'
                 }
+              , {
+                    io: ioREST
+                  , mountPoint: 'lib/metapolator'
+                  , pathOffset: 'lib/bower_components/metapolator-cpsLib/lib'
+                }
             ]
           , project = new Project(io, projectDir, undefined, cpsLibIoMounts)
           , promise
@@ -75,7 +80,7 @@ function (
         io.mkDir(false, 'project');
         promise = ioREST.copyRecursive(true, 'project', io, 'project')
                  .then(project.load.bind(project, true))
-                 // currently no async openSession (no bi issue since we
+                 // currently no async openSession (no big issue since we
                  // use mostly InMemoryIO)
                  .then(project.openSession.bind(project, false))
                  .then(null, errors.unhandledPromise)
