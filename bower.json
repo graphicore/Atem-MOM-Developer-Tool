@@ -25,14 +25,14 @@
     "tests"
   ],
   "dependencies": {
-    "Atem-MOM-Toolkit": "git@github.com:graphicore/Atem-MOM-Toolkit.git",
-    "Atem-MOM": "git@github.com:graphicore/Atem-MOM.git",
-    "Atem-CPS-Developer-Tool": "git@github.com:graphicore/Atem-CPS-Developer-Tool.git",
+    "Atem-MOM-Toolkit": "https://github.com/graphicore/Atem-MOM-Toolkit.git",
+    "Atem-MOM": "https://github.com/graphicore/Atem-MOM.git",
+    "Atem-CPS-Developer-Tool": "https://github.com/graphicore/Atem-CPS-Developer-Tool.git",
     "angular": ">=1.5.3",
     "requirejs-domReady": ">=2.0.1",
-    "Atem-RequireJS-Config": "git@github.com:graphicore/Atem-RequireJS-Config.git",
+    "Atem-RequireJS-Config": "https://github.com/graphicore/Atem-RequireJS-Config.git",
     "requirejs": ">=2.2.0",
     "less.js": ">=2.6.1",
-    "metapolator-cpsLib": "metapolator/metapolator-cpsLib"
+    "metapolator-cpsLib": "https://github.com/metapolator/metapolator-cpsLib.git"
   }
 }
