@@ -1,4 +1,4 @@
-require([
+define([
     'require/domReady'
   , 'angular'
   , './app/app'
@@ -93,5 +93,5 @@ function (
                    ;
         });
     }
-    main();
+    return main;
 });

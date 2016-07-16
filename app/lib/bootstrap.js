@@ -1,5 +1,5 @@
-require([
-    'lib/bower_components/Atem-RequireJS-Config/browserConfig'
+define([
+    'bower_components/Atem-RequireJS-Config/browserConfig'
 ], function(
     configure
 ) {
@@ -12,5 +12,5 @@ require([
         }
     }
     configure(setup, require);
-    require(['Atem-MOM-Developer-Tool/main']);
+    return require;
 });
