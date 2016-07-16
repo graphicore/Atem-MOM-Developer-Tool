@@ -25,6 +25,12 @@
     "url": "https://github.com/graphicore/Atem-MOM-Developer-Tool/issues"
   },
   "homepage": "https://github.com/graphicore/Atem-MOM-Developer-Tool",
+
+  "devDependencies": {
+    "less": "~1.7.5",
+    "regenerator": ">=0.6.5",
+    "bower": "*"
+  },
   "dependencies": {
     "commander": "git://github.com/graphicore/commander.js.git#atem-integration",
     "express": "^4.13.4",
